@@ -1,0 +1,20 @@
+@startuml
+
+Fermé : Le portail est fermé
+Ouvert : Le portail est ouvert
+Ouvrant : Le portail est en train de s'ouvrir
+Fermant : Le protail est en train de se fermer
+
+[*] --> Fermé
+
+Ouvert --> Fermant : Clé valide
+
+Fermé --> Ouvrant : Clé valide
+
+Fermant --> Ouvrant : Clé valide
+
+Ouvrant --> Ouvert : Ouverture
+
+Fermant --> Fermé : Fermeture
+
+@enduml
