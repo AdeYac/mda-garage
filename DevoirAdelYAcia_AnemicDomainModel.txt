@@ -1,0 +1,14 @@
+AnemicDomainModel (modèle de domaine anémique)
+
+D'après Martin Fowler, ce modèle est un anti-modèles qui devient de plus en plus populaire et il pense que ce n'est pas une bonne chose.
+A première vue il ressemble à un vrai modèle, avec des objets connectés les un autres sauf qu'il n'y a pas de comportement sur ces objets, c'est pratiquement
+des Getter et Setter. Mais il y a des objets de services audessus qui capturent toute la logique du domaine.
+Martin Fowler dis que c'est contraire à la programmation orienté objet, et que c'est juste une conception style procédural.
+Le problème des modèles de domaine anémiques est qu'ils encourent tous les coûts d'un modèle de domaine, sans en tirer aucun avantage. En transférant tout le 
+comportement dans les services, vous vous retrouvez essentiellement avec des scripts de transaction, et vous perdez ainsi les avantages que le modèle de domaine 
+peut apporter.
+Cette confusion est du au experts en orienté objet qui recommendent d'utiliser des services.
+
+Sebastian Gebski n'est pas totalement d'accord avec ce que Martin à dis,il trouve que c'est une sorte d'évolution et il n'y a rien de mal à utiliser une variation 
+moderne, qui pourrait même être la plus préférée de nos jours pour des raisons de pratiques. Par exemple pour livraison continue gràace à cette approche de la pureté 
+fonctinnelle il est facile de tester correctement la logique métier.
